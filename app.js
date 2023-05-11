@@ -29,6 +29,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(userRouter);
 app.use(taskRouter);
 
+app.get("/", (req, res) => {
+  res.send("Nice working");
+});
+
 // req.query gives params
 connectDB();
 /*Database part ends here*/
